@@ -1,9 +1,9 @@
+# ⚠ DO NOT USE! THIS IS A HEAVY WORK IN PROGRESS. ⚠
+
 # What is cord.ts?
-`cord.ts` is a TypeScript alternative to Discord.js
+`cord.ts` is a Discord library, utilizing TypeScript.
 
 # Installation
 ```
 yarn|node install cord.ts
 ```
-
-idk what else to add im too tired
