@@ -1,0 +1,41 @@
+import Role from '../../models/Role';
+import Emoji from '../../models/Emoji';
+
+export default interface Guild {
+    id: string;
+    name: string;
+    icon: string | null;
+    iconHash: string | null;
+    splash: string | null;
+    splashHash: string | null;
+    discoverSplash: string | null;
+    discoverSplashHash: string | null;
+    owner: string;
+    region: string | null;
+    afkChannelID: string | null;
+    afkTimeout: number;
+    widgetEnabled: boolean;
+    widgetChannelID: string | null;
+    verificationLevel: number;
+    messageNotificationLevel: number;
+    explicitContentFilter: number;
+    roles: Role;
+    emojis: Emoji;
+    features: string[] | null;
+    mfaLevel: number;
+    systemChannelID: string | null;
+    systemChannelFlags: string | null;
+    rulesChannelID: string | null;
+    maxPresences: number | null;
+    maxMembers: number;
+    vanity: string | null;
+    description: string | null;
+    bannerHash: string | null;
+    banner: string | null;
+    premiumTier: number;
+    premiumSubscriberCount: number | null;
+    locale: string;
+    updateChannelID: string | null;
+    maxVideoChannelUsers: number;
+    progressBar: boolean;
+}
