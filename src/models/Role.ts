@@ -41,7 +41,7 @@ export default class Role implements RoleInterface {
         this.color = color;
         this.hoist = hoist;
         this.iconHash = iconHash;
-        this.icon = `${cdnBase}/role-icons/${id}/${iconHash}`;
+        this.icon = `${cdnBase}/role-icons/${id}/${iconHash}.png`;
         this.emoji = emoji;
         this.position = position;
         this.permissions = permissions;

@@ -1,6 +1,7 @@
 import Client from '../client/Client';
 import Message from '../models/Message';
-import MessageReference from '../Models/MessageReference';
+import MessageReference from '../models/MessageReference';
+import User from '../models/User';
 
 export default function(client: Client, payload: any) {
     const message = new Message(
@@ -23,8 +24,26 @@ export default function(client: Client, payload: any) {
         payload.d.flags,
         payload.d.edited_timestamp,
         payload.d.content,
+        new User(
+            payload.d.author.id,
+            payload.d.author.username,
+            payload.d.author.discriminator,
+            payload.d.author.avatar,
+            payload.d.author.bot,
+            payload.d.author.system,
+            payload.d.author.mfa_enabled,
+            payload.d.author.banner,
+            payload.d.author.accent_color,
+            payload.d.author.locale,
+            payload.d.author.verified,
+            payload.d.author.email,
+            payload.d.author.flags,
+            payload.d.author.premium_type,
+            payload.d.author.public_flags,
+            client
+        ),
         client
-    )
+    );
 
-    client.emit('message', message);
+    client.emit('message', message as Message);
 }

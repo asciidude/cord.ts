@@ -1,5 +1,6 @@
 import Role from '../../models/Role';
 import Emoji from '../../models/Emoji';
+import Client from '../../client/Client';
 
 export default interface Guild {
     id: string;
@@ -38,4 +39,5 @@ export default interface Guild {
     updateChannelID: string | null;
     maxVideoChannelUsers: number;
     progressBar: boolean;
+    client: Client | null;
 }
