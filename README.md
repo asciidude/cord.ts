@@ -1,4 +1,4 @@
-# ⚠ DO NOT USE! THIS IS A HEAVY WORK IN PROGRESS. ⚠
+# ⚠ Project abandoned. Check out [friction.js](https://github.com/asciidude/friction.js)
 
 # What is cord.ts?
 `cord.ts` is a Discord library, utilizing TypeScript.
